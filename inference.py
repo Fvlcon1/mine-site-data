@@ -9,7 +9,7 @@ import torch
 app = FastAPI(title="Mining Site Segmentation API")
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-model = YOLO("best.pt")
+model = YOLO("mine.pt")
 model.to(device)
 
 NEON_GOLD = (0, 215, 255)  
